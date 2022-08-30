@@ -68,7 +68,7 @@ class AlignedDataset(BaseDataset):
         E = Image.open(E_path).convert('L')
         E_tensor = transform_A(E)
 
-        index_un = np.random.randint(14221)
+        index_un = np.random.randint(150)
         C_un_path = self.C_paths[index_un]
         C_un = Image.open(C_un_path).convert('RGB')
         C_un_tensor = transform_B(C_un)
@@ -246,7 +246,7 @@ class AlignedDataset_aug(BaseDataset):
         E = Image.open(E_path).convert('L')
         E_tensor = transform_A(E)
 
-        index_un = np.random.randint(14221)
+        index_un = np.random.randint(150)
         C_un_path = self.C_paths[index_un]
         C_un = Image.open(C_un_path).convert('RGB')
         C_un_tensor = transform_B(C_un)
