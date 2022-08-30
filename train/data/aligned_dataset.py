@@ -81,7 +81,7 @@ class AlignedDataset(BaseDataset):
         with open(osp.join(pose_name), 'r') as f:
             pose_label = json.load(f)
             try:
-                pose_data = pose_label['people'][0]['pose_keypoints']
+                pose_data = pose_label['people'][0]['pose_keypoints_2d']
             except IndexError:
                 pose_data = [0 for i in range(54)]
             pose_data = np.array(pose_data)
